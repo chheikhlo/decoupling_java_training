@@ -38,7 +38,7 @@ public class Simulation {
         long nbDemand = player.askNextGuess();
 
         if (this.numberToGuess == nbDemand) {
-            logger.log("Bravo t'as trouvé");
+            logger.log("won");
             return true;
         }
 
