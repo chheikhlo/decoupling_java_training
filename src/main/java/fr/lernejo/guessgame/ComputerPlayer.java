@@ -12,7 +12,7 @@ public class ComputerPlayer implements Player{
 
     @Override
     public long askNextGuess() {
-        //logger.log("Veuiller renseigner une valeur svp : ");
+        logger.log("won");
         SecureRandom random = new SecureRandom();
         long randomNumber = random.nextLong(0,1000);
         logger.log(String.valueOf(randomNumber));
