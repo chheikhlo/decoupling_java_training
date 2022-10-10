@@ -23,29 +23,30 @@ public class Simulation {
         //TODO implement me
         this.player = player;
     }
-
     public void initialize(long numberToGuess) {
         //TODO implement me
         this.numberToGuess = numberToGuess;
     }
-
     /**
      * @return true if the player have guessed the right number
      */
     private boolean nextRound() {
         //TODO implement me
-
         long nbDemand = player.askNextGuess();
-
         if (this.numberToGuess == nbDemand) {
-            logger.log("won");
+            logger.log("Bravo t'as trouvé");
             return true;
         }
-
         player.respond(this.numberToGuess < nbDemand);
-
-      return false;
+        return false;
     }
+    public void loopUntilPlayerSucceed() {
+        //TODO implement me
+        while(nextRound() == false){
+            nextRound();
+        }
+    }
+
 
     public void loopUntilPlayerSucceed(int maxIterBoucle) throws InterruptedException {
         //TODO implement me
@@ -53,7 +54,7 @@ public class Simulation {
 
         Date date1 = new Date(start);
         String result1 = new SimpleDateFormat("mm:ss.SSS").format(date1.getTime());
-        //logger.log("Début Jeu à: "+result1);
+        logger.log("Début Jeu à: "+result1);
 
         long stop = System.currentTimeMillis();
 
