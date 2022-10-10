@@ -11,7 +11,7 @@ public class HumanPlayer implements Player{
 
     @Override
     public long askNextGuess() {
-        logger.log("Veuiller renseigner une valeur svp : ");
+        logger.log("won");
         Scanner sc = new Scanner(System.in);
         long nbDemand = sc.nextLong();
         return nbDemand;
