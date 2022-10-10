@@ -54,7 +54,7 @@ public class Simulation {
 
         Date date1 = new Date(start);
         String result1 = new SimpleDateFormat("mm:ss.SSS").format(date1.getTime());
-        logger.log("Début Jeu à: "+result1);
+        //logger.log("Début Jeu à: "+result1);
 
         long stop = System.currentTimeMillis();
 
